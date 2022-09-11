@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+  <inputs>
+    <inputs name="/VANET/simulations/veins_inet/results/plain-*.vec"/>
+    <inputs name="/VANET/simulations/veins_inet/results/plain-*.sca"/>
+  </inputs>
+  <datasets>
+    <datasets name="test">
+      <items xsi:type="scave:Add" filterPattern="file(/VANET/simulations/veins_inet/results/plain-#0.vec) AND attr:configname(plain) AND attr:runnumber(0) AND module(Scenario.node[0].wlan[0].radio) AND name(radioMode:vector)" type="VECTOR"/>
+    </datasets>
+  </datasets>
+  <chartSheets/>
+</scave:Analysis>
